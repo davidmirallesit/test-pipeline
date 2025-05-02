@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-code:
+  build-docker-image:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,7 +18,13 @@ jobs:
         run: |-
           cd .github/docker
           source variables.sh
-          export DOCKER_VERSION=$GITHUB_SHA
+          export DOCKER_VERSION="$GITHUB_SHA-webpremium"
           export AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
           export AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
           packer build docker-ubuntu22-php8.4-phalcon5.9.0.json
+      - name: Discord notification
+        env:
+          DISCORD_WEBHOOK: https://discord.com/api/webhooks/1026099782244118569/JVWVeWvs8usNtAUlbRGoRrXS2s6pajENmLBZbmRNG5k781yGBLmRWQoPeF6SDD_tIMZO
+        uses: Ilshidur/action-discord@master
+        with:
+          args: 'Nueva imagen de docker para webpremium: 776535672105.dkr.ecr.eu-west-3.amazonaws.com/infolot-base:$GITHUB_SHA-webpremium :checkered_flag:'
