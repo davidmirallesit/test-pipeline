@@ -16,8 +16,6 @@ jobs:
           version: 1.6.5
       - name: Commands
         run: |-
-          packer --version
-          ls -la
-          cd docker
+          cd .github/docker
           ls -al 
           packer build
