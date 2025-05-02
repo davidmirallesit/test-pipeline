@@ -8,4 +8,4 @@ export DOCKER_NAME="infolot-base"
 
 export PHP_VERSION="8.4"
 export PHALCON_VERSION="5.9.0"
-export WEBPREMIUM_FOLDER=".."
+export WEBPREMIUM_FOLDER="../../"

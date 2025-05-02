@@ -17,5 +17,5 @@ jobs:
       - name: Commands
         run: |-
           cd .github/docker
-          ls -al 
-          packer build
+          ls -al ../../
+          packer build docker-ubuntu22-php8.4-phalcon5.9.0-wp.json
