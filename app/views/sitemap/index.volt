@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{% for i in 0..sitemapsNeeded %}<sitemap><loc>{{url}}/sitemap{{i}}.xml.gz</loc><lastmod>{{lastModDates[i]}}</lastmod></sitemap>{% endfor %}</sitemapindex>

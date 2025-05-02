@@ -1,0 +1,18 @@
+name: Deploying code
+run-name: Deploying code by ${{ github.actor }}
+on:
+  push:
+    branches:
+      - develop
+      - master
+jobs:
+  deploy-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deployment through curl command
+        run: |-
+          if [[ "$GITHUB_REF_NAME" == "develop" ]]; then
+            curl https://www.dev.webpremium.eu/commands/command.php?token=${{ secrets.COMMAND_TOKEN }}
+          elif [[ "$GITHUB_REF_NAME" == "master" ]]; then 
+            curl https://www.webpremium.eu/commands/command.php?token=${{ secrets.COMMAND_TOKEN }}
+          fi

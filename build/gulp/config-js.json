@@ -1,0 +1,14 @@
+{
+  "dst_folder": "../public/js/",
+  "src_files" : [
+    "node_modules/jquery/dist/jquery.js",
+    "node_modules/components-jqueryui/jquery-ui.js",
+    "node_modules/popper.js/dist/umd/popper.js",
+    "node_modules/bootstrap/dist/js/bootstrap.js",
+    "custom/js/smooth-scroll.js",
+    "custom/js/jquery.mapit.min.js",
+    "custom/js/initializers.js",
+    "custom/js/webpremium.js",
+    "custom/js/cookie-consent.js"
+  ]
+}

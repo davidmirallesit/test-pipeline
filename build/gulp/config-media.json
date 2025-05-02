@@ -1,0 +1,6 @@
+{
+  "paths": [
+    ["node_modules/components-jqueryui/themes/ui-lightness/images/*", "../public/css/images/"],
+    ["custom/js/sections/*", "../public/js/"]
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "dst_folder": "../public/css/",
+  "src_files" : [
+    "node_modules/bootstrap/dist/css/bootstrap.css",
+    "custom/sass/font-awesome.min.css",
+    "custom/sass/simple-line-icons.css",
+    "custom/sass/styles.css",
+    "node_modules/components-jqueryui/themes/base/jquery-ui.css",
+    "node_modules/bootstrap4-toggle/css/bootstrap4-toggle.min.css"
+  ],
+  "src_paths": [
+    "node_modules/bootstrap/scss/",
+    "custom/sass/"
+  ]
+}

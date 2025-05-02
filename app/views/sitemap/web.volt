@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{% for url in urls %}<url><loc>{{webUrl}}{{url}}</loc><lastmod>{{last_mod}}</lastmod></url>{% endfor %}</urlset>

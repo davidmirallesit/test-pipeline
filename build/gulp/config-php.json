@@ -1,0 +1,6 @@
+{
+  "json_dir": "composer/",
+  "php_exec": "/usr/bin/php82",
+  "composer_exec": "/usr/bin/composer"
+}
+

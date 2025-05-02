@@ -1,0 +1,3579 @@
+/*@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');*/
+
+.bg-azulclaro{ background-color: white; }
+
+.text-black{ color: black}
+
+/* Style the header */
+.header {
+    z-index: 99999;
+    background-color:white;
+}
+
+/* Page content */
+.content {
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+.clearboth{
+    clear:both;
+    text-align: left !important;
+}
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 102px;
+}
+
+.hide-placeholder:focus::placeholder {
+    color: transparent;
+}
+
+.font_size_15{
+    font-size:15px;
+}
+
+
+.style_white_space{
+    white-space:inherit !important;
+}
+
+.loader {
+    border: 5px solid #f3f3f3; /* Light grey */
+    border-top: 5px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media screen and (min-width: 992px) {
+    .txt_importe_row {
+        bottom:50px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .txt_importe_row {
+        bottom:15px;
+    }
+}
+
+.position_importes_txt{
+    margin-left:25px;
+    margin-top:0px;
+    display: inline-block;
+}
+
+.position_width_initial{
+    width:initial !important
+}
+
+.white_space_normal{
+    white-space: normal;
+}
+
+.width_height_100{
+    width:100%;
+    height:100%;
+}
+
+.text_align{
+    text-align:center;
+}
+
+.float_left{
+    float:left;
+}
+
+.float_right{
+    float:right;
+}
+
+.display_none{
+    display:none;
+}
+
+.display_inline{
+    display:inline;
+}
+
+.width_150{
+    width:150px;
+}
+
+.width_250{
+    width:250px;
+}
+
+.width_20{
+    width:20%;
+}
+
+.width_10{
+    width:10%;
+}
+
+.width_43{
+    width:43%;
+}
+
+.width_16{
+    width:16%;
+}
+
+.padding_0{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.carrito_cantidad{
+    width:initial !important;
+    display:-webkit-inline-box
+}
+
+.carrito_cantidad_box{
+    width:15px;
+    background-color:transparent;
+    border: 0px;
+}
+
+.carrito_cantidad_input{
+    width:44px !important;
+    height:35px !important;
+    margin-left:6px !important;
+    margin-right:6px !important;
+    display:initial !important;
+}
+
+.carrito_table{
+    font-size:16px;
+    font-weight: 700;
+    width:100%;
+}
+
+.carrito_table_cantidad{
+    width:25px;
+}
+
+.carrito_label_total{
+    font-size:18px;
+    font-weight: 600;
+}
+
+.carrito_span_procesando{
+
+    display:none;
+}
+
+.carrito_div_procesando{
+    display:inline-block;
+}
+
+.color_black{
+    color:black;
+}
+
+.btn-rojo{ background-color: red; color: #fff }
+
+/* ==========================================================================
+   Importaciones
+   ========================================================================== */
+/*@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Roboto:400,500,700');*/
+/* ==========================================================================
+   Estilos globales
+   ========================================================================== */
+
+/*@font-face {
+    font-family: 'Open Sans', sans-serif;
+  src: url('../fonts/numlae.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+*/
+
+
+a:hover {
+    color: #247f98;
+    text-decoration: none;
+}
+a:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ol {
+    list-style: none;
+}
+
+
+.navbar-toggler-icon { width: 1em;height: 1.2em;}
+
+
+.rounded-50{border-radius: 50px}
+
+
+.text-azulclaro{color: #e8f4f8;}
+
+
+.btn-verde-claro{ background-color: #18a44b; color: #fff }
+
+
+header nav ul li a{padding: .5rem 1.1rem !important; text-transform: uppercase; font-weight: lighter; color: #000 !important }
+
+header nav ul li.cesta a{border-radius: 50px; }
+
+header nav ul li .dropdown-menu a{ font-size: 0.9em; text-transform: initial;}
+header #roof,#roof a{ color: #fff; font-size: 13px }
+
+
+/*carrusel home*/
+.carousel h2{ font-weight: lighter; }
+.carousel h2 span{ font-weight: bold; }
+
+/*pagina inicio*/
+
+.decimo{box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);max-width: 400px; width: 100%}
+.selector_decimo .num_sel { font-size: 22px; font-weight: bold;padding: 3px 10px;margin: 3px 1px;background-color: #fff; color: #000 }
+.selector_decimo .num_sel input{ width: 20px;height: 25px;margin-top: 0.2rem;padding: 2px;font-size: 10px;flex: none;text-align: center; }
+.selector_decimo .num_sel .num {width: 70px;}
+.selector_decimo .num_sel .input-group{ width: 80px}
+.selector_decimo .num_sel button{ width: 25px;height: 25px;margin-top: 0.2rem;}
+.info_decimo .txt_importe{position: absolute;bottom: 2px;right: 85px;font-size: 20px;color: #000;}
+.info_decimo .txt_importe_lot{position: absolute;bottom: 2px;right: 130px;font-size: 20px;color: #000;}
+.info_decimo .importe{position: absolute;bottom: 3px;right: 29px;font-weight: bold;color: #000;font-size: 25px;letter-spacing: -1px;}
+.info_decimo .importe_lot{position: absolute;bottom: 3px;right: 80px;font-weight: bold;color: #000;font-size: 25px;letter-spacing: -1px;}.info_decimo .txt_importe{position: absolute;bottom: 2px;right: 85px;font-size: 20px;color: #000;}
+.info_decimo_ln .txt_importe_lot{position: absolute;bottom: 2px;font-size: 20px;color: #000;}
+.info_decimo_ln .importe{position: absolute;bottom: 3px;right: 29px;font-weight: bold;color: #000;font-size: 25px;letter-spacing: -1px;}
+.info_decimo_ln .importe_lot{position: absolute;bottom: 3px;right: 80px;font-weight: bold;color: #000;font-size: 25px;letter-spacing: -1px;}
+.decimoAleatorio{ /*background-color: #fff;*/font-size: 40px;color: black;display: initial;padding: 3px 5px;font-weight: bold; }
+/*varios*/
+.juego_penas h6 span{ display:block;font-size: 12px;}
+.juego_penas .precio_participacion{font-size: 40px;font-weight: bold;}
+
+.botes .precio_bote{font-size: 24px;font-weight: bold;}
+.resultados img{ max-width: 35px }
+.juegosactivos img{ max-width: 85px; width: 100% }
+.resultados .bote{line-height: 0.9rem;}
+.precio_bote_2{font-size: 22px;font-weight: 600; color: #656565;}
+
+/*empresas*/
+.selector_decimo_empresa .num_sel { font-size: 22px; font-weight: bold;padding: 3px 10px; color: #000 }
+.selector_decimo_empresa .num_sel input{ width: 20px;height: 25px;margin-top: 0.2rem;padding: 2px;font-size: 10px;flex: none;text-align: center; }
+.selector_decimo_empresa .num_sel .num {width: 70px;}
+.selector_decimo_empresa .num_sel .input-group{ width: 80px}
+.selector_decimo_empresa .num_sel button{ width: 25px;height: 25px;margin-top: 0.2rem;}
+
+.span_cuenta_atras_comprobador_home{
+    font-size: 15px;
+    font-weight: 500;
+    color:black;
+}
+
+.button_jugar_menu_games_home{
+    /*width: 70px;
+    height: 25px;*/
+    padding: 1px 10px;
+    border-radius: 34px;
+    background-color: #6cd660;
+    display: inline-block !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 13px;
+}
+
+
+
+.button_jugar_menu_games_home_text, .button_jugar_menu_games_home_text_secondary {
+    font-size: 14px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+/*contacto*/
+#map_canvas {
+    height: 600px;
+    width: 100%;
+}
+
+.main-content {
+    background: url("/img/background/contact-bg.jpg") center;
+    background-size: auto;
+    background-size: cover;
+}
+
+.main-content {
+    background: url("/img/background/contact-bg.jpg") center;
+    background-size: cover;
+}
+#contact .contact-form {
+    background: #fff;
+    padding: 57px 40px;
+    margin: -254px 0px 200px;
+    max-height: 750px;
+}
+#contact .information {
+    background: #777777;
+    padding: 65px 30px;
+    margin-top: -254px;
+    max-height: 750px;
+}
+#contact .information .title-medium {
+    color: #ffffff !important;
+    margin-left: 24px;
+}
+#contact .information .contact-datails {
+    margin: 15px 0px 48px;
+}
+#contact .information .contact-datails .icon {
+    float: left;
+    font-size: 38px;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 50%;
+    color: #fff;
+}
+#contact .information .contact-datails .info {
+    margin-left: 60px;
+}
+#contact .information .contact-datails .info span.detail {
+    font-size: 16px;
+    display: block;
+    font-weight: 500;
+    color: #fff;
+}
+#contact button {
+    margin-top: 30px;
+}
+#contact button i {
+    font-size: 20px;
+    margin-left: 5px;
+}
+#contact .social {
+    margin: 110px 0 22px;
+    font-size: 30px;
+    color: #fff;
+    margin-right: 30px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+#contact .social a .fa-twitter:hover {
+    color: #00aced;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+#contact .social a .fa-google-plus:hover {
+    color: #E91E63;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+#contact .social a .fa-linkedin:hover {
+    color: #007bb6;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+#contact input {
+    display: block;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    position: absolute;
+    background: transparent;
+    height: 100%;
+    font-size: 1em;
+    font-family: inherit;
+    font-weight: 400;
+    padding-top: 15px;
+}
+#contact .title-header {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 68px;
+}
+#contact .title-header .title-medium {
+    font-size: 22px;
+    color: #2d2d2d;
+    font-weight: 700;
+}
+#contact .title-header .icon {
+    margin-top: 10px;
+}
+#contact .title-header .icon i {
+    color: #e91e63;
+    font-size: 48px;
+}
+#contact input:focus,
+#contact textarea:focus {
+    outline: none;
+}
+#contact input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #f2f2f2 inset;
+}
+#contact textarea {
+    width: 100%;
+    height: 180px;
+    border: none;
+    resize: none;
+    background: transparent;
+    padding: 0;
+    padding-top: 20px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 400;
+}
+#contact .label {
+    display: block;
+    font-weight: 400;
+    color: #bbbbbb;
+    position: absolute;
+    top: 20px;
+    padding: 0;
+    font-size: 16px;
+}
+#contact .label-line.active .label {
+    top: 0px;
+    font-size: 16px;
+    color: #e91e63;
+}
+#contact .span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #e4e4e4;
+    bottom: 0px;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+}
+#contact .span.active {
+    top: auto;
+    bottom: 0px;
+}
+#contact .label-line {
+    position: relative;
+    height: 50px;
+    margin: 0px 0 30px;
+}
+#contact .transition {
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.5, 1);
+    -moz-transition-timing-function: cubic-bezier(0.4, 0, 0.5, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.5, 1);
+}
+#contact .label-line.textarea {
+    height: 180px;
+}
+#contact .span:before {
+    content: "";
+    width: 0;
+    left: 50%;
+    height: 2px;
+    background: #e91e63;
+    position: absolute;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: .5s;
+}
+#contact .label-line.active .span:before {
+    width: 100%;
+    left: 0%;
+    height: 2px;
+    background: #e91e63;
+}
+#contact .text-left {
+    text-align: center;
+    display: block;
+    margin-top: -38px;
+}
+
+/*contenido*/
+
+.blog-post {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.post-title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+}
+
+/*pagina contacto*/
+.page-header::before {
+    background: rgba(34, 34, 34, 0.8);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+}
+
+.page-header {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    background-size: cover;
+    background-position: 0px 0px, 50% 50%;
+    min-height: 120px;
+}
+.page-header:before {
+    background: rgba(34, 34, 34, 0.8);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+}
+.page-header .page-header-inner {
+    position: absolute;
+    color: #fff;
+    bottom: 10px;
+}
+.page-header .page-title {
+    text-align: left;
+    color: #fff;
+    font-size: 40px;
+    padding: 6px 0;
+    margin-bottom: 10px !important;
+}
+.page-header .breadcrumb {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    position: relative;
+    z-index: 9;
+}
+
+.page-header .breadcrumb li a {
+    color: #fff;
+}
+.page-header .breadcrumb li a:hover {
+    color: #e91e63;
+}
+
+
+/*menu lateral*/
+.widget-title {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 12px 15px;
+    background: #F9F9F9;
+    border-bottom: 1px solid #247f98;
+    margin-bottom: 20px;
+}
+.widget-search {
+    margin-bottom: 48px;
+}
+.widget-search input[type="search"] {
+    position: relative;
+    margin: 0;
+    float: left;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    height: 42px;
+    border: none;
+    line-height: 37px;
+    width: 100%;
+    border-radius: 0;
+}
+.widget-search input[type="search"]:focus {
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.14);
+}
+.widget-search .search-btn {
+    display: inline-block;
+    width: 38px;
+    position: absolute;
+    height: 42px;
+    border: none;
+    background: transparent;
+    right: 30px;
+    color: #000;
+    font-size: 1.2em;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 0 2px 2px 0;
+    -webkit-border-radius: 0 2px 2px 0;
+    -moz-border-radius: 0 2px 2px 0;
+    -o-border-radius: 0 2px 2px 0;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+.widget-search .search-btn:hover {
+    color: #e91e63;
+}
+
+#sidebar {
+    margin-bottom: 30px;
+    /*padding: 0px 30px;*/
+}
+#sidebar .widget {
+    padding-bottom: 30px;
+}
+#sidebar .widget:last-child {
+    border-bottom: none;
+}
+
+#sidebar .menu-left li a {
+    padding: 8px 18px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #666;
+    display: block;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+#sidebar .menu-left li a:hover {
+    color: #247f98;
+    background-color: #e8f4f8
+}
+#sidebar .menu-left li .num-posts {
+    color: #aaa;
+    float: right;
+    font-size: 12px;
+}
+
+.game_title_home{
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #212529;
+    display: inline-block;
+}
+
+.button_jugar_menu_games_home_comprobar {
+    /*width: 96px;*/
+    padding: 1px 10px;
+}
+
+/*gualde ajuste botones botes*/
+
+
+
+#sidebar .posts-list li{
+    border-radius: 6px;
+    /*height: 100px;*/
+    margin-bottom: 12px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 1200px) {
+    .game_title_home{
+        font-size: 12px;
+    }
+    .button_jugar_menu_games_home_comprobar{
+        /*width: 80px;*/
+    }
+    .button_jugar_menu_games_home{
+        /*width: 60px;*/
+    }
+    .button_jugar_menu_games_home_text, .button_jugar_menu_games_home_text_secondary {
+        font-size: 12px;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 768px) {
+    .precio_bote_2{
+        margin-bottom: 7px;
+        text-align: center;
+    }
+
+    .responsive_sidebar_ipad{
+        margin-top: 10px;
+        /*display: flex;
+        /*justify-content: center;*/
+    }
+
+    
+
+    #sidebar .posts-list li{
+        height: initial;
+        padding-bottom: 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    .precio_bote_2 {
+        font-size: 17px;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 768px){
+    .responsive_sidebar_ipad{
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 576px) {
+    .precio_bote_2{
+        margin-bottom: inherit;
+        text-align: inherit;
+    }
+}
+
+#sidebar .posts-list li:hover {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: #e8f4f8
+}
+#sidebar .posts-list .widget-thumb {
+    float: left;padding: 10px;
+}
+#sidebar .posts-list .widget-thumb img {
+    width: 100%;
+    max-width: 47px;
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+#sidebar .posts-list .widget-thumb:hover img {
+    opacity: 0.7;
+}
+#sidebar .posts-list .widget-content {
+    margin-left: 94px;
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: 16.5px;
+    color: initial;
+}
+#sidebar .posts-list a .widget-content  {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #2d2d2d;
+}
+#sidebar .posts-list a .widget-content span {
+    color: #999;
+    font-size: 12px;
+    display: block;
+    margin: 3px 0;
+    line-height: 18px;
+}
+#sidebar .posts-list a .widget-content span i {
+    margin-right: 5px;
+}
+#sidebar .tag a {
+    display: inline-block;
+    color: #666;
+    font-size: 14px;
+    padding: 7px 14px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+    margin: 4px 2px;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+#sidebar .tag a i {
+    padding-right: 5px;
+}
+#sidebar .tag a:hover {
+    color: #e91e63;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-icon .social i {
+    color: #777777;
+    background: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-right: 2px;
+    font-size: 14px;
+    width: 32px;
+    height: 32px;
+    border-radius: 0;
+    line-height: 32px;
+    text-align: center;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.social-icon a .fa-facebook:hover {
+    color: #3b5998;
+}
+.social-icon a .fa-twitter:hover {
+    color: #00aced;
+}
+.social-icon a .fa-linkedin:hover {
+    color: #007bb6;
+}
+.social-icon a .fa-dribbble:hover {
+    color: #ea4c89;
+}
+.social-icon a .fa-behance:hover {
+    color: #42C0FB;
+}
+
+.social-link a {
+    display: inline-block;
+    margin-right: 5px;
+}
+.social-link a i {
+    text-align: center;
+    color: #777777;
+    font-size: 18px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    height: 38px;
+    line-height: 36px;
+    width: 38px;
+    transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
+.social-link .twitter:hover i {
+    color: #00BAFF;
+}
+.social-link .facebook:hover i {
+    color: #5192CC;
+}
+.social-link .google:hover i {
+    color: #ED523D;
+}
+.social-link .linkedin:hover i {
+    color: #1985BC;
+}
+.social-link .youtube:hover i {
+    color: #D42424;
+}
+
+.widget-buscador { background-color: #e8f4f8; margin-bottom: 30px}
+.widget-buscador div,.widget-buscador p { text-align: center;}
+.widget-buscador a.separador_terminacion {margin-left: 10.5px;}
+.widget-buscador a.terminacion{color: #000;background-color: #fff;height: 40px;width: 35px;text-align: center;padding: 8px 0;font-size: 18px;display: inline-block;margin-top: 7px;}
+
+
+.widget-buscador .campo_numero {width: 80%;height: 25px;font-size: 16px;margin: 15px 0; padding: 5px 10px; text-align: center;}
+
+.bloque_azulClaro{ background-color: #e8f4f8 }
+.play{font-weight: initial; display: inline;}
+
+
+/*banners*/
+#event {
+    background-size: cover;
+    position: relative;
+}
+
+
+
+/*footer*/
+
+
+footer h3 {
+    font-size: 14px;
+    font-weight: 700;
+    padding-bottom: 10px; margin-top: 20px;
+}
+
+#copyright .copyright-text {
+    padding: 14px;
+    margin: 0;
+}
+
+
+/* ==========================================================================
+Back to top
+========================================================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 35px;
+    right: 40px;
+    /*display: none;*/
+    z-index: 99;
+}
+
+
+ul.resultado{clear: both;}
+
+ul.resultado li.combinacion {
+    margin-left: 9px;
+}
+.comprobador ul.resultado li.combinacion {
+    margin-left: 5px;
+}
+ul.resultado li {
+    float: left;
+    list-style: none outside none;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cajaCompIndice { background-color: #F00;margin-left: -8px;margin-top: -8px;width: 41px;height: 43px;margin-right: 3px; }
+.cajaCompOff {
+    background-color: #FFFFFF;
+    border: 2px solid #FF0000;
+    color: red;
+}
+
+.cajaCompOn {
+    background-color: #FF0000;
+    border: 2px solid #FF0000;
+    color: white;
+}
+
+.cajaComp {
+    font: 18px/20px Verdana,Arial;
+    padding: 4px 2px 4px 2px;
+    margin:3px;
+    text-align: center;
+    width:30px;
+    cursor:hand;
+    cursor:pointer;
+}
+
+.cajaReintegro { /* AÃ±adido por Fermin 10-01-2013 */
+    font: 18px/20px Verdana,Arial;
+    padding: 4px 2px 4px 2px;
+    width:45px;
+    cursor:hand;
+    border: 2px solid #ff0000;
+    font-color:#ff0000;
+}
+
+.left { float: left }
+
+.comprobador { /*margin:3px;*/ padding:8px; margin: 0 auto; color:#FFFFFF; /*text-shadow: 0px 1px 0px #000000;*/ }
+.comprobador_bonoloto { width:207px; border: 5px solid #FF0000;}
+.comprobador_reintegro { color: #1A75CE; padding:6px; margin: 0 auto; width: 110px; }
+
+
+.resultados_tabla_quiniela,.resultados_tabla_quinigol {
+    width: 55px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    height: 30px;
+    behavior: url(ie-css3.htc);
+    padding-top: 3px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #D70800;
+    margin: 2px 0px;
+    text-align: center;
+}
+
+.resultados_tabla_quinigol {   width: 80px;}
+.resultados_tabla_quiniela_num {
+
+    position: relative;
+    z-index: 2;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+.resultados_tabla_fila {
+}
+.resultados_tabla_equipo {
+    font-size: 16px;
+    color: #00285E;
+}
+
+.bola_fallo{
+    background: url("/img/bola_fallo.png") no-repeat scroll 0 0 transparent;width: 48px;height: 47px;padding-top: 7px;font: bold 26px arial;color: #000;text-align: center;
+}
+
+.contenedor_base_cent_contenido{
+    background-color: #d0d0d012;
+}
+
+.blink{ animation: blink 1s linear infinite;}
+
+.buscarterminacion{border: none;font-size: 30px;font-weight: bold;padding: 9px 0;text-align: center;}
+.listloteria{position: absolute;top: 39px;left: 45%;font-size: 29px;color: #3e3c3c;font-weight: bold;}
+
+
+@keyframes blink{
+    0%{opacity: 0;}
+    25%{opacity: .25;}
+    50%{opacity: .5;}
+    75%{opacity: .75;}
+    100%{opacity: 1;}
+}
+
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .navbar-brand img{height: 50px;}
+    #main_menu{margin-top: 15px;}
+    #main_menu ul li a{font-size: 0.8rem  }
+    .container {min-width: 100%;}
+
+    .page-header .page-title {font-size: 35px;}
+
+}
+
+.container_tabla_header{
+    background-color:transparent;
+}
+
+.container_tabla_header_quinigol{
+    background-color:transparent;
+}
+
+@media all and (min-width: 576px) {
+    .pull-left-responsive{
+        float:left;
+    }
+    .pull-right-responsive{
+        float:right;
+    }
+}
+
+@media all and (min-width: 576px) {
+    .container_tabla_header{
+        width: 190px;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .actionIcon{
+        font-size:30px;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .container_tabla_header{
+        height: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .row_quiniela {
+        margin-bottom:3px;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .container_tabla_header_quinigol{
+        height: 32px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.container_tabla_euromillones{
+    width: 430px;
+}
+
+@media all and (min-width: 576px) {
+    .container_tabla_euromillones_vertical{
+        width: 190px;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .container_tabla_euromillones_vertical{
+        padding-bottom:15px;
+    }
+}
+
+.container_tabla_quinigol_vertical{
+    background-color:#ececec;
+}
+
+.text_label {
+    font-size: 15px;
+    color: #656565;
+    font-weight: 300;
+    padding: 12px;
+    text-align: left;
+}
+.text_tabla_euromillones{
+    font-size: 15px;
+    color: #656565;
+    font-weight: 300;
+    padding: 12px;
+    text-align: left;
+}
+
+.comprador_tabla_euromillones{
+    font-size: 15px;
+    color: #656565;
+    font-weight: 300;
+    padding-top: 10px;
+    text-align: left;
+}
+
+.text_tabla_loteria_nacional{
+    font-size: 15px;
+    color: #656565;
+    font-weight: 300;
+    padding: 12px;
+    text-align: left;
+}
+
+@media all and (min-width: 576px) {
+    .comprador_container_numeros_tabla_euromillones{
+        padding: 0px 12px 12px 12px;
+        display: inline-table;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .comprador_container_numeros_tabla_euromillones{
+        display: flex;
+        margin-top: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media all and (min-width: 576px) {
+    .contenedor_apuestas
+    {
+        /* display: flex; */
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media all and (min-width: 576px) {
+    .style_tabla_comprar_euromillones{
+        display: inline-table;
+        text-align: center;
+        margin-right:10px;
+        margin-left:10px;
+    }
+}
+
+@media all and (min-width: 576px) {
+    .style_tabla_comprar_quiniela{
+        /* display: inline-table; */
+        display: inline-block;
+        text-align: center;
+        margin-right:10px;
+        margin-left:10px;
+        float: none;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .style_tabla_comprar_euromillones{
+        display: inline-table;
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 576px) {
+    .style_tabla_comprar_quiniela{
+        text-align: center;
+    }
+}
+
+.container_boleto_numeros{
+    display: flex;
+    justify-content: center;
+}
+
+@media all and (min-width: 576px) {
+    .container_boleto_numeros{
+        margin-bottom: 7px;
+    }
+    .quiniela_pleno_p {
+        margin-bottom: 15px;
+    }
+}
+
+@media all and (max-width: 575px) {
+    .quiniela_pleno_p {
+        margin-bottom: 0px;
+    }
+}
+
+/* TODO muchos de estos ya no se usan */
+
+.semana_button_text{
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.dias_button_text{
+    float:right;
+    font-size: 16px;
+}
+
+.dropbtn {
+    color: white;
+    width: 67%;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.dropdown_date {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 530px !important;
+}
+
+.dropdown-content_date {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content_date a {
+    color: black;
+    padding: 0px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content_date a:hover {background-color: #f1f1f1}
+
+.dropdown_date button:hover +.dropdown-content_date, .dropdown_date .dropdown-content_date:hover {
+    display: block;
+}
+
+.pointer_a{
+    cursor: pointer;
+}
+
+.display_dropdown{
+    width: 100%;
+    display: inline-block !important;
+}
+
+.disabled_day{
+    background-color: #e0e0e0;
+    color: #7e7e7e;
+}
+
+.div_day{
+    font-size: 12px;
+    line-height: 17px;
+    border: 2px solid white;
+}
+
+.div_day_semana{
+    border: 2px solid white;
+    line-height: 33px;
+}
+
+.span_disabled_day{
+    font-size: 12px;
+}
+
+.span_disabled_day_number{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.no_draw{
+    opacity: 0.3;
+}
+
+.column_buttons_borrar_favorito{
+    display: block;
+    justify-content: flex-end;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.div_containter_resumen_boleto{
+    margin-left: 10px;
+    background-color: #f4f4f4;
+    padding: 6px 20px;
+}
+
+.align_items_resumen_boleto{
+    align-items: center;
+}
+
+.style_label_resumen{
+    font-size: 20px;
+    font-weight: 600;
+    color: #656565;
+}
+
+.style_num_apuestas{
+    font-weight: 300;
+}
+
+.button_comprar_añadir_al_carrito
+{
+    border-radius: 34px;
+    padding: 5px 10px;
+    font-size: 23px;
+}
+
+.div_ver_premios_bonoloto{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.txt-premio,
+.comprar_euromillones_escoge_numeros{
+    font-size: 20px;
+    font-weight: 300;
+    color: #ff9e9f;
+}
+
+.margin_hr_quinigol{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.partidos_quinigol{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: #656565;
+}
+
+.quiniela_match_name{
+    font-size: 14px;
+    color: #656565;
+    white-space: nowrap;
+}
+
+.container_tabla_euromillones_estrellas{
+    width:190px;
+}
+
+.selector_fecha_comprobador{
+    border: none;
+    background-color:transparent;
+    width: 85px;
+}
+
+.span_comprobar_comprar{
+    font-size: 30px;
+    font-weight: 300;
+    color: #656565;
+    cursor: pointer;
+}
+
+.span_comprobar_title{
+    font-size: 30px;
+    font-weight: 300;
+    color: #656565;
+    cursor: pointer;
+    line-height: initial;
+    display: inline-block;
+}
+
+.btn-see-prizes {
+    border-radius: 34px;
+    background-color: #ececec;
+    height: 46px;
+    color: #656565;
+    font-size: 20px;
+    font-weight: 300;
+    width: 228px;
+}
+
+.button_comprobar_euromillones_ver_premios{
+    border-radius: 34px;
+    background-color: #ececec;
+    height: 46px;
+    color: #656565;
+    font-size: 20px;
+    font-weight: 300;
+    width: 228px;
+}
+
+.div_comprobador{
+    margin-top: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 20px 0 #0000000d;
+    padding: 25px;
+}
+
+.center_cols{
+    display:flex;
+    justify-content: center;
+}
+
+.separator_sections{
+    border-right: 1px solid #707070;
+}
+
+.button_ver_resultados{
+    height: 46px;
+    border-radius: 34px;
+    background-color: #ececec;
+}
+
+.label_resultados_euromillones{
+    font-size: 30px;
+    font-weight: 300;
+    color: #656565;
+
+}
+
+.span_resultados_euromillones{
+    font-size: 20px;
+    font-weight: 600;
+    color: #656565;
+    cursor: pointer;
+}
+
+.input_numero_loteria_nacional{
+    border: 1px solid black !important;
+    font-size: 30px;
+    height: 45px;
+    border: none;
+    margin-left: 12px;
+    text-align: center;
+}
+
+.width_serie{
+    width: 100%;
+}
+
+.width_apuesta{
+    width: 70%;
+}
+
+.euro_label{
+    font-size: 30px;
+    font-weight: 300;
+    color: #cbcbcb;
+}
+
+.section_comprobador_loteria_naciona_cupon{
+    padding: 20px;
+    margin: 20px;
+    border-radius: 11px;
+}
+
+.premio_label_comprobar_loteria_nacional{
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1px;
+}
+
+.premio_label_comprobar_loteria_nacional_numero{
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.reintegro_label_comprobar_loteria_nacional{
+    display: grid;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.div_comprobar_loteria_nacional{
+    height: 37%;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: none;
+}
+
+.span_bote_comprobador{
+    font-size: 25px;
+    font-weight: 300;
+    color: #656565;
+}
+
+.span_cuenta_atras_comprobador{
+    font-size: 16px;
+    font-weight: 300;
+    color: #656565;
+    text-align: right;
+}
+
+.button_boleto_cambiar_apuesta_button_responsive{
+    background-color: #467898;
+    width: 100%;
+    color:white;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+@media (max-width: 1200px) {
+    .premio_label_comprobar_loteria_nacional_numero{
+        font-size: 26px;
+    }
+
+    .premio_label_comprobar_loteria_nacional{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .selector_fecha_comprobador{
+        width: 135px;
+    }
+
+    .span_comprobar_comprar{
+        font-size: 24px;
+    }
+
+    .div_comprobador{
+        margin: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .div_comprobar_loteria_nacional{
+        height: 15%;
+    }
+
+    .text_tabla_loteria_nacional
+    {
+        text-align:center;
+    }
+
+    .width_apuesta{
+        width: 80%;
+    }
+
+    .separator_sections{
+        border-right: none;
+    }
+
+    .margin_top_responsive{
+        margin-top: 30px;
+    }
+
+    .container_tabla_euromillones{
+        width: 320px;
+    }
+
+    .container_tabla_euromillones_estrellas{
+        width: 175px;
+    }
+}
+
+@media (max-width: 576px){
+
+    .align_responsive_footer{
+        text-align: center;
+    }
+
+    .div_comprobador{
+        box-shadow: none;
+    }
+
+    .container_tabla_euromillones_estrellas{
+        width: 100%;
+    }
+
+}
+
+.cc_dialog.simple{
+    max-width: 100% !important;
+}
+
+.no_display {
+    -webkit-appearance: none !important;
+    display: none !important;
+}
+
+@media all and (max-width: 576px) {
+    .hidden_responsive {
+        -webkit-appearance: none;
+        display: none;
+    }
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button_cambiar_multiple{
+    width: 100%;
+    height: 35px;
+    font-size: 15px;
+    margin-bottom: 5px;
+    background-color: white;
+}
+
+.table thead th{
+    border-top: none;
+    font-size: 26px;
+    color: #dbdbdb;
+    font-weight: 300;
+}
+
+.table tbody td{
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.margin_left_none{
+    margin-left: 0px;
+}
+
+@media all and (max-width: 576px) {
+    .table tbody td{
+        font-size: 11px;
+    }
+
+    .table thead th{
+        font-size: 11px;
+    }
+
+    .dropbtn{
+        margin-left: 0px;
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .dropdown_date{
+        margin-top: 10px;
+    }
+}
+
+.numeros_disponibles{
+    font-size: 22px;
+    font-weight: 300;
+    display:inline-block;
+}
+
+.numeros_disponibles_negrita{
+    font-weight: 600;
+}
+
+.button_seleccionar_numero_aleatorio{
+    border-radius: 34px;
+    background-color: #cbcbcb;
+    font-size: 23px;
+    margin-top: 30px;
+    font-weight: 300;
+    color: #656565;
+    padding: 7px 21px;
+    white-space: normal;
+}
+
+.button_buscar_numero{
+    border-radius: 34px;
+    background-color: #18a44b;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 6px 21px;
+    color: white;
+
+}
+@media screen and (min-width: 768px){
+    .button_buscar_numero{
+        float:right;
+    }
+}
+
+.item_loteria_nacional{
+    height: 75px;
+    background-color: transparent;
+    margin-top: 20px;
+}
+
+.container_loteria_nacional{
+    height: 100%;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px 0 #0000004f;
+    background-color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.image_box_loteria_nacional{
+    height: 100%;
+    /* background-color: #3378b3; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+.image_loteria_nacional{
+    width: 75px;
+}
+
+.numbers_box_loteria_nacional{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media all and (max-width: 1200px) {
+    .numbers_box_loteria_nacional{
+        width: 67%;
+    }
+    .span_loteria_nacional{
+        line-height: 1.5;
+    }
+    .span_number_loterial_nacional{
+        font-size: 19px !important;
+    }
+    .numeros_disponibles{
+        font-size: 20px;
+        font-weight: 300;
+    }
+}
+@media all and (max-width: 767px) {
+    .numeros_disponibles{
+        font-size: 16px;
+        font-weight: 300;
+    }
+}
+@media all and (max-width: 425px) {
+    .button_seleccionar_numero_aleatorio{
+        font-size: 20px;
+        padding: 7px 16px;
+    }
+}
+@media all and (max-width: 375px) {
+    .button_seleccionar_numero_aleatorio{
+        font-size: 17px;
+        padding: 7px 16px;
+    }
+}
+@media all and (min-width: 320px) {
+    .span_loteria_nacional {
+        line-height: 1.3;
+        font-size:10px !important;
+        padding-bottom:10px;
+    }
+    .span_number_loterial_nacional {
+        font-size: 19px !important;
+    }
+    .number_box_loteria_nacional {
+        margin-left: 2px !important;
+    }
+    .button_seleccionar_numero_aleatorio{
+        font-size: 13px;
+        padding: 7px 16px;
+    }
+
+}
+
+.number_box_loteria_nacional{
+    margin-left: 15px;
+}
+
+.pill_availability_box_loteria_nacional{
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    bottom: 0px;
+    position: absolute;
+    color: white;
+    opacity: 80%;
+    z-index: 1;
+}
+
+.pill_availability_box_searcher_tail_number{
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    bottom: 47px;
+    position: absolute;
+    color: white;
+    opacity: 80%;
+    z-index: 1;
+}
+
+.pill_availability_box_searcher_full_number{
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    bottom: 0px;
+    position: absolute;
+    color: white;
+    opacity: 80%;
+    z-index: 1;
+}
+
+.span_loteria_nacional{
+    font-size: 11.6px;
+    font-weight: 300;
+    display: block;
+}
+
+.span_number_loterial_nacional{
+    font-size: 34px;
+    font-weight: 600;
+    color: #3c3c3b;
+    letter-spacing: 2.72px;
+    line-height: 0.94;
+    display: block;
+}
+
+.span_cantidad_loteria_nacional{
+    font-size: 12px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.margin_div_cantidad_loteria_nacional{
+    margin-top: -5px;
+}
+
+.button_transparent{
+    background-color: transparent;
+}
+
+.cantidad_loteria_nacional{
+    padding: 4px;
+    border: none;
+    text-align: center;
+}
+
+.row_margin_total{
+    margin-top: 25px;
+}
+
+.span_total_loteria_nacional{
+    font-size: 22px;
+    font-weight: 300;
+    color: #656565;
+}
+@media all and (max-width: 425px){
+    .span_total_loteria_nacional{
+        margin-bottom: 9px;
+    }
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+}
+.dropdown-sorteos{
+    color: #656565 !important;
+    background-color: transparent !important;
+    border: none;
+}
+
+@media all and (max-width: 2560px) {
+    .dropdown-content_date{
+        width: 68% !important;
+        right: 17% !important;
+    }
+}
+@media all and (max-width: 1950px) {
+    .dropdown-content_date{
+        width: 68% !important;
+        right: 12% !important;
+    }
+}
+
+@media all and (max-width: 1440px) {
+    .dropdown-content_date{
+        width: 70% !important;
+        right: 3% !important;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .margin-right-abono {
+        margin-right: 31px !important;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .dropdown-content_date{
+        width: 69% !important;
+        right: 8% !important;
+    }
+}
+@media all and (max-width: 768px) {
+    .dropdown-content_date{
+        width: 70% !important;
+        right: 0% !important;
+    }
+}
+@media all and (max-width: 425px) {
+    .dropdown-content_date{
+        width: 70% !important;
+        right: 10% !important;
+    }
+}
+@media all and (max-width: 375px) {
+    .dropdown-content_date{
+        width: 70% !important;
+        right: 7% !important;
+    }
+    .margin-right-abono {
+        margin-right: 9% !important;
+    }
+    .style_label_resumen{
+        font-size: 17px !important;
+    }
+}
+@media all and (max-width: 320px) {
+    .dropdown-content_date{
+        width: 69% !important;
+        right: 4% !important;
+    }
+    .margin-right-abono {
+        margin-right: 11% !important;
+    }
+    .style_label_resumen {
+        font-size: 14px !important;
+    }
+}
+.dropdown-content_date{
+    bottom:36px;
+}
+.dropdown-sorteos-ln{
+    color: #656565 !important;
+    background-color: transparent !important;
+    -webkit-border-radius: 42px;
+    -moz-border-radius: 42px;
+    border-radius: 42px;
+    border-style: solid;
+    outline: none;
+    font-weight: 700;
+    text-align-last: center;
+}
+
+@media all and (max-width: 2560px) {
+    .selecciona-terminacion-p{
+        margin-left: 0%;
+    }
+    .clearboth{
+        margin: auto;
+        width: 59%;
+        text-align: center;
+    }
+    .clearboth > form {
+        clear: both;
+    }
+    .campo_numero{
+        width: 52% !important;
+    }
+}
+@media all and (max-width: 1440px) {
+    .dropdown-sorteos-ln-left {
+        width: 100%;
+    }
+}
+@media all and (max-width: 1200px) {
+    .dropdown-sorteos-ln-left {
+        width: 90%;
+    }
+    .selecciona-terminacion-p{
+        margin-left: 15%;
+    }
+
+    .clearboth{
+        margin: auto;
+        width: 100%;
+        text-align: center;
+    }
+    .clearboth > form {
+        clear: both;
+        text-align: center;
+    }
+    .campo_numero{
+        width: 37% !important;
+    }
+}
+@media all and (max-width: 768px) {
+    .dropdown-sorteos-ln-left {
+        width: 38%;
+    }
+    .selecciona-terminacion-p{
+        margin-left: 0%;
+        margin-right: 21px;
+        line-height: 50px;
+    }
+    .separador_terminacion{
+        margin-left: 13px !important;
+    }
+    .campo_numero{
+        width: 54% !important;
+    }
+}
+@media all and (max-width: 425px) {
+    .dropdown-sorteos-ln-left {
+        width: 70%;
+    }
+    .selecciona-terminacion-p{
+        margin-left: 0%;
+        margin-right: 0px;
+        line-height: 26px;
+        float: none;
+    }
+    .clearboth{
+        text-align: center !important;
+    }
+    .separador_terminacion {
+        margin-left: 1px !important;
+    }
+    .campo_numero{
+        width: 100% !important;
+    }
+}
+@media all and (max-width: 375px) {
+    .dropdown-sorteos-ln-left {
+        width: 66%;
+    }
+    .widget-content>p{
+        font-size: 13px;
+    }
+    .terminacion{
+        height: 30px !important;
+        width: 30px !important;
+        padding: 2px 0 !important;
+        font-size: 24px !important;
+    }
+}
+@media all and (max-width: 320px) {
+    .dropdowns-form-sorteos-ln{
+        text-align: right;
+        font-size: 10px;
+    }
+    .dropdown-sorteos-ln-left {
+        width: 68%;
+    }
+    .widget-content>p{
+        font-size: 10px;
+    }
+    .terminacion{
+        height: 24px !important;
+        width: 24px !important;
+        padding: 0px 0 !important;
+        font-size: 19px !important;
+    }
+}
+
+.dropdown-sorteos-ln {
+    min-width: 262px;
+    max-width: 310px;
+    width: 100%;
+}
+
+.dropdown-sorteos-ln-left {
+    min-width: 262px;
+    max-width: 310px;
+    width: 100%;
+}
+
+.dropdowns-form-img-ln{
+    margin-left: 0px !important;
+    /*text-align: right !important;*/
+    width: 100% !important;
+    margin-bottom: 20px !important;
+    text-align-last: center;
+}
+.info_decimo>div>a{
+    font-size: 16px;
+}
+.info_decimo_ln>div>a{
+    font-size: 16px;
+}
+.importe-info-decimo{
+    font-size: 40px !important;
+    font-weight: 300 !important;
+    line-height: 0.88 !important;
+    color: #656565 !important;
+}
+.add-cart-ln{
+    margin-top: 36px;
+    font-size: 30px;
+    padding: 5px 23px;
+}
+@media all and (max-width: 320px) {
+    .add-cart-ln{
+        font-size: 24px;
+    }
+}
+.pagina_boletos_activa{
+    display: contents !important;
+}
+.pagina_boletos{
+    display:none;
+}
+.nums_paginador{
+    margin-top: 45px !important;
+    margin: auto;
+    font-size: 23px;
+    font-weight: 300;
+    color: #656565;
+    line-height: 0.96;
+}
+.page_arrow{
+    background-color: #d4d4d4;
+    color: white;
+    border-radius: 50%;
+    padding: 0px 13px;
+    font-size: 19px;
+    margin: 5px;
+}
+.bloque_numeros_boletos{
+    min-height: 500px;
+}
+.info_decimo_ln{
+    min-height:450px;
+}
+.page_links{
+    cursor: pointer;
+}
+.pagina_activa{
+    font-weight: bold;
+}
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #000000;
+}
+@media all and (max-width:1200px){
+    .importe-info-decimo{
+        font-size: 38px !important;
+    }
+}
+
+@media all and (max-width:768px){
+    .info_decimo_ln {
+        min-height: 421px;
+    }
+}
+
+@media all and (max-width:425px){
+    .info_decimo_ln {
+        min-height: 412px;
+    }
+    .info_decimo_ln>div>a {
+        font-size: 21px;
+    }
+}
+
+@media all and (max-width:375px){
+    .info_decimo_ln {
+        min-height: 368px;
+    }
+    .info_decimo_ln>div>a {
+        font-size: 18px;
+    }
+}
+
+@media all and (max-width:320px){
+    .info_decimo_ln {
+        min-height: 350px;
+    }
+    .info_decimo_ln>div>a {
+        font-size: 14px;
+    }
+    .text-nums-disponibles{
+        font-size: 20px !important;
+    }
+}
+.text_selecciona_sorteo{
+    margin-right:30px;
+}
+.fa-chevron-circle-right{
+    margin-left:5px;
+}
+.fa-chevron-circle-left{
+    margin-right: 5px;
+}
+.iconos-tarjetas{
+    width: 100%;
+    max-width: 401px;
+}
+/*@media only screen and (min-width: 767.8px) {
+    .icono-banco{
+        width: 150px;
+        height: 150px;
+    }
+}*/
+
+.icono-footer{
+    max-width: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 767.8px) and (max-width: 991.8px){
+    .responsive-li-tablet-view{
+        width: 50%;
+        float: left;
+    }
+
+    .responsive_sidebar_ipad{
+        /*justify-content: center;*/
+    }
+}
+
+.text-nums-disponibles{
+    font-size: 21px;
+    display: inline-block;
+}
+
+.terminacion_selector_container {
+   /* margin-left: 78px;*/
+}
+
+.carrito_section {
+    border-radius: 6px;
+    border: solid 1.5px #c4c4c4;
+}
+
+.carrito_pedido_header {
+    align-items: center;
+}
+
+.carrito_header_text {
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+    text-align: left;
+    color: #212529;
+}
+
+.carrito_line_main {
+    font-size: min(20px,6vw);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+    text-align: left;
+    color: #212529;
+}
+
+.carrito_line_text {
+    font-size: min(24px,5vw);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+    color: #212529;
+}
+
+.carrito_header_info_title {
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: #656565;
+}
+
+.carrito_header_info_data {
+    font-size: min(20px,5vw);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: #656565;
+}
+
+.carrito_participaciones_header_info_data {
+    font-size: min(20px,4vw);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: #656565;
+    word-break: break-all;
+}
+
+.carrito_delete_container {
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.carrito_delete_icon {
+    color: #cbcbcb;
+}
+
+.pedido_linea_data {
+    font-size: min(4vw,20px);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: #656565;
+}
+
+.textImporte {
+    font-size: 40px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.88;
+    letter-spacing: normal;
+    text-align: center;
+    color: #656565;
+}
+
+.textImporte .importeValue {
+    font-weight: 600;
+}
+
+.carrito_button_finalizar, .resume_order_button_continuar {
+    width: 224.3px;
+    height: 52.2px;
+    border-radius: 34px;
+    background-color: #18a44b;
+    font-size: 22px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: center;
+    color:white;
+}
+
+.row-seleccionar-mostrar-anyadir{
+
+}
+
+.button_seleccionar_numero_aleatorio_row_multi{
+    border-radius: 34px;
+    background-color: #cbcbcb;
+    font-weight: 300;
+    color: #656565;
+    padding: 7px 21px;
+    width: 100%;
+}
+
+.button_anyadir_a_la_cesta_row_multi{
+    border-radius: 34px;
+    background-color: #18a44b;
+    font-weight: 300;
+    padding: 6px 21px;
+    color: white;
+}
+
+.style_mostrar_mas_multi{
+    font-weight: 300;
+    color: #212529;
+}
+.col-button-anyadir{
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .button_seleccionar_numero_aleatorio_row_multi{
+        font-size: 13px;
+    }
+    .button_anyadir_a_la_cesta_row_multi{
+        text-align: center;
+        width: 100%;
+        font-size: 11.5px;
+    }
+    .style_mostrar_mas_multi{
+        width: 100%;
+    }
+    .button_buscar_numero{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .button_seleccionar_numero_aleatorio_row_multi{
+        font-size: 13px;
+    }
+    .button_anyadir_a_la_cesta_row_multi{
+        text-align: center;
+        width: 100%;
+        font-size: 15px;
+        margin-top: 12px;
+    }
+    .style_mostrar_mas_multi{
+        width: 100%;
+        margin-top: 12px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .button_seleccionar_numero_aleatorio_row_multi{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .button_anyadir_a_la_cesta_row_multi{
+        font-size: 14px;
+    }
+    .button_buscar_numero{
+        font-size: 14px;
+    }
+}
+.no-left-padding{
+    padding-left: 0px !important;
+}
+.no-right-padding{
+    padding-right: 0px !important;
+}
+.text-info-ticket{
+    font-size: 16px;
+    font-weight: 300;
+    color: #656565;
+}
+.text-info-ticket-result{
+    font-size: 16px;
+    font-weight: 400;
+}
+.div-mas-sorteos{
+    z-index: 1100;
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    right: 1%;
+    background-color: white;
+    top: 75%;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+@media screen and (max-width: 374.98px){
+    .div-mas-sorteos{
+        width: 250px;
+        height: 300px;
+        right: 6.5%;
+    }
+    .btn-verde-mas-sorteos{
+        font-size: 12px;
+    }
+}
+@media screen and (min-width: 375px) and (max-width: 767.98px){
+    .div-mas-sorteos{
+        width: 100%;
+        right: 0.5%;
+    }
+    .btn-verde-mas-sorteos{
+        font-size: 12px;
+    }
+}
+
+.collapsing.div-mas-sorteos{
+    height: 300px !important;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px){
+    .pull-right-boleto{
+        width:75%;
+    }
+    .number_box_loteria_nacional.pull-left{
+        width: 50%;
+    }
+    .number_box_loteria_nacional.pull-right{
+        width: 50%;
+    }
+    .span_loteria_nacional{
+        font-size: 13px !important;
+        margin-bottom: 2px !important;
+    }
+    .span_cantidad_loteria_nacional{
+        font-size: 13px !important;
+    }
+    .margin_div_cantidad_loteria_nacional{
+        margin-right: 10%;
+    }
+}
+
+
+@media(max-width: 374.8px){
+    .pull-right-boleto{
+        width:69%;
+    }
+    .number_box_loteria_nacional.pull-left{
+        width: 50%;
+    }
+    .number_box_loteria_nacional.pull-right-boleto{
+        width: 50%;
+    }
+    .span_loteria_nacional{
+        font-size: 11.4px !important;
+    }
+    .span_cantidad_loteria_nacional{
+        font-size: 11.4px !important;
+    }
+    .margin_div_cantidad_loteria_nacional{
+        margin-right:4%;
+    }
+}
+@media(min-width: 375px){
+    .pull-right-boleto{
+        width:74%;
+    }
+    .number_box_loteria_nacional.pull-left{
+        width: 50%;
+    }
+    .number_box_loteria_nacional.pull-right-boleto{
+        width: 50%;
+    }
+    .span_loteria_nacional{
+        font-size: 14px !important;
+    }
+    .span_cantidad_loteria_nacional{
+        font-size: 14px !important;
+    }
+    .margin_div_cantidad_loteria_nacional{
+        margin-right:11%;
+    }
+}
+@media(min-width: 400px){
+    .margin_div_cantidad_loteria_nacional{
+        margin-right: 15%;
+    }
+}
+
+@media(min-width: 475px) and (max-width: 767px){
+    .margin_div_cantidad_loteria_nacional{
+        margin-right: 25%;
+    }
+}
+
+@media(min-width: 768px){
+    .margin_div_cantidad_loteria_nacional{
+        margin-right: 11%;
+    }
+}
+@media (min-width: 992px){
+    .pull-right-boleto{
+        width:71%;
+    }
+    .number_box_loteria_nacional.pull-left{
+        width: 50%;
+    }
+    .number_box_loteria_nacional.pull-right-boleto{
+        width: 50%;
+    }
+    .span_loteria_nacional{
+        font-size: 12px !important;
+        margin-bottom: 2px !important;
+    }
+    .span_cantidad_loteria_nacional{
+        font-size: 12px !important;
+    }
+    .margin_div_cantidad_loteria_nacional{
+        margin-right: 3%;
+    }
+}
+
+@media (min-width: 1200px){
+    .pull-right-boleto{
+        width:76%;
+    }
+    .number_box_loteria_nacional.pull-left{
+        width: 50%;
+    }
+    .number_box_loteria_nacional.pull-right-boleto{
+        width: 50%;
+    }
+    .span_loteria_nacional{
+        font-size: 16px !important;
+        margin-top: 4px;
+        margin-bottom: 0px !important;
+    }
+    .span_cantidad_loteria_nacional{
+        font-size: 16px !important;
+    }
+    .margin_div_cantidad_loteria_nacional{
+        margin-right:14%;
+    }
+    .span_number_loterial_nacional{
+        font-size: 18px !important;
+        margin-bottom: 7px;
+    }
+}
+
+.buscador_numeros{
+    background-color: #e8f4f8;
+    padding:17px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top:40px;
+}
+.buscador_numeros a.terminacion{color: #000;background-color: #fff;height: 40px;width: 35px;text-align: center;padding: 8px 0;font-size: 18px;display: inline-block;margin-top: 7px;}
+.buscador_numeros a.separador_terminacion {margin-left: 10.5px;}
+.buscador_numeros .campo_numero {height:25px; text-align:center;width: 100% !important;}
+.buscador_numeros .form-numero{width: 100%; margin-top: 20px; margin-bottom: 1%;}
+.buscador_numeros span.span-selecciona-sorteo{margin-right: 25px;}
+
+@media (max-width: 576px) {
+
+    .dropdown-sorteos-ln{
+        font-size: min(4vw,14px);
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .dropdown-sorteos-ln{
+        font-size: min(4vw,13px);
+        max-width: 280px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 992px){
+    .row-form-numero{
+        text-align: center;
+    }
+    .btn-verde-claro{
+        margin-top:7.5px;
+    }
+
+}
+
+.resumen-pedido-titulo {
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.46;
+    letter-spacing: normal;
+}
+
+.resumen-pedido-info-cabecera {
+    font-size: min(4vw,18px);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    color: #212529;
+}
+
+.resumen-pedido-info-cabecera-value {
+    font-weight: 600;
+}
+
+.resumen-pedido-line-header {
+    font-size: min(4.5vw,20px);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: #212529;
+}
+
+.resumen-pedido-line-info {
+    font-size: min(4.5vw,20px);
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    color: #656565;
+}
+
+.resumen-pedido-line-info-value {
+    font-weight: 600;
+}
+
+.resumen-pedido-importe-total {
+    font-size: min(8vw,35px);
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    color: #656565;
+}
+
+.resumen-pedido-importe-total-value {
+    font-weight: 600;
+}
+
+.modal-sm {
+    max-width: 500px;
+}
+
+.pull-right{
+    float:right;
+}
+.pull-left{
+    float: left;
+}
+.special-hr{
+    border-top: 1px solid white;
+    width: 70%;
+}
+.logo-empresa-venta-participaciones{
+    display: block;
+    max-width:350px;
+    max-height:79px;
+    width: auto;
+    height: auto;
+}
+
+#select_participaciones_small{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    width: 100%;
+}
+.custom-img-responsive{
+    width: 100%;
+    height: 100%;
+}
+
+
+@media (max-width: 991.8px){
+    .bigParticipaciones{
+        display: none;
+    }
+    .smallParticipaciones{
+        display: block;
+    }
+    #smallNumParticipaciones{
+        width: 20px !important;
+    }
+    .smallNumParticipaciones{
+        width: 60px !important;
+    }
+}
+@media (min-width: 991.8px){
+    .bigParticipaciones{
+        display: block;
+    }
+    .smallParticipaciones{
+        display: none;
+    }
+}
+@media (max-width: 767.8px){
+    .logo-empresa-venta-participaciones{
+        display: block;
+        max-width:261px;
+        max-height:59px;
+        width: auto;
+        height: auto;
+    }
+    .columna-logo-empresa{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media(max-width: 575px){
+    #panelSmallParticipaciones{
+        width: 95%;
+    }
+}
+
+@media(min-width: 467px){
+    #total_price_small{
+        font-size: 50px;
+    }
+}
+
+@media(max-width: 466px){
+
+    #smallNumParticipaciones{
+        width: 20px !important;
+    }
+    .smallNumParticipaciones{
+        width: 35px !important;
+    }
+    #select_participaciones{
+        font-size: 10px;
+    }
+    #total_price_small{
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 400px){
+    .logo-navbar{
+        max-width: 142px;
+    }
+}
+@media(max-width: 327px){
+    #pDonativoResponsive{
+        font-size: 15px !important;
+    }
+}
+@media(max-width: 355px){
+    .navbarTextResponsive{
+        font-size: 10px !important;
+    }
+}
+
+@font-face {
+    font-family: "numlae";
+    src: url("/fonts/numlae.eot"); /* IE9 Compat Modes */
+    src: url("/fonts/numlae.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("/fonts/numlae.otf") format("opentype"), /* Open Type Font */
+      url("/fonts/numlae.svg") format("svg"), /* Legacy iOS */
+      url("/fonts/numlae.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("/fonts/numlae.woff") format("woff"), /* Modern Browsers */
+      url("/fonts/numlae.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-numlae {
+    font-family: 'numlae';
+}
+.custom_a_link{
+    color:#fff;
+}
+.custom_a_link:hover{
+    color:#429bf5;
+}
+.customCheckBox input[type="checkbox"]{
+    /* zoom: 1.5; */
+    transform: scale(1.5);
+}
+
+@media(max-width:767.8px) {
+    .custom-block-100W {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 393.8px){
+    .small-toggle-icon{
+        width: 30px;
+    }
+    .small-img-icon{
+        width: 100% !important;
+    }
+    .logo-empresa-navbar{
+        width: 150px;
+        height: 60px;
+        margin: 0!important;
+    }
+}
+
+.partido_seleccionable_elige8:hover{
+    cursor: pointer;
+}
+
+.partido_seleccionado_elige8:hover{
+    cursor:pointer;
+}
+
+.partido_seleccionado_elige8{
+    background-color: #ececec;
+    border-radius: 12px;
+}
+
+.partido_seleccionado_movil_elige8{
+    background-color: #a8a8a8;
+    border-radius: 12px;
+}
+/*@media(max-width: 767.8px){
+    .partido_seleccionado_elige8{
+        background-color: #a8a8a8;
+    }
+}*/
+
+.icono-footer-custom{
+    max-width: 160px;
+}
+
+.selae-img{
+    position: absolute;
+    font-size: 10px;
+    bottom: 8%;
+    left: 26%;
+}
+
+.img-elige8{
+    max-height: 40px;
+    margin-bottom: 10px;
+}
+
+.elige8-small-logo{
+    max-height: 20px;
+}
+
+.elige8-small-logo-container{
+    display: none;
+    margin-top: 10px;
+}
+
+@media(max-width: 767.8px){
+    .inner-bote-time{
+        justify-content: flex-end !important;
+        margin-right: 10px;
+    }
+
+    .inner-bote{
+        text-align: right;
+        margin-right: 10px;
+        font-weight: 600;
+    }
+
+    .button_jugar_menu_games_home{     
+        padding: 5px 15px;
+    }
+
+    .button_jugar_menu_games_home_comprobar{
+        padding: 5px 15px;
+    }
+
+    .button_jugar_menu_games_home_text, .button_jugar_menu_games_home_text_secondary {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .elige8-small-logo-container{
+        display: block;
+    }
+
+    .span_cuenta_atras_comprobador_home{
+        font-weight: 500;
+    }
+
+    .custom-logo-mobile{
+        height: 50px;
+        width: 50px;
+    }
+
+    .game_title_home{
+        font-size: 20px;
+    }
+}
+
+@media(min-width: 768px){
+    .custom-logo-mobile{
+        height: 18px;
+        width: 18px;
+    }
+
+
+}
+
+@media(min-width: 992px){
+    .social-links-footer{
+        display: none;
+    }
+}
+
+@media(max-width: 991.8px){
+    .social-links-footer{
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        padding-top:10px;
+        padding-bottom: 10px;
+    }
+
+    .custom-icon-color{
+        color: white;
+    }
+
+    #cards{
+        margin-top: 10px;
+    }
+
+}
+
+/*TODO sacar este color de aqui {{ get_item_css('code_a', 'fg', game, pv) }}*/
+.elige8-text {
+    color: #0078c1;
+}
+
+/*Titulos paginas juegos*/
+.title-games {
+  font-weight: 100;
+    display: inline-block;
+    color: #656565;
+    font-size: 25px;
+}
+@media(max-width: 768px) {
+    .title-games {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .span_bote_comprobador, .span_cuenta_atras_comprobador, .span_comprobar_comprar {
+        display: none;
+    }
+    .span_comprobar_title{
+        font-size: 20px;
+        margin-top: 15px;
+    }
+    .span_comprobar_title{
+        display: contents;
+    }
+}
+@media(max-width: 1024px)
+{
+    .botes .precio_bote{
+        font-size: 15px;
+    }
+}
+.button-botes-bote{
+    font-size: 15px;
+    font-weight: 400;
+    white-space: break-spaces;
+}
+
+.custom-alert-background {
+    background-color:rgba(192,192,192,0.3);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+}
+
+.custom-alert-textbox {
+    background-color: white;
+    width: 40rem;
+    max-height: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 0.3rem;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid red;
+    box-shadow: 0.2rem 0.3rem rgba(140, 140, 140, 0.3);
+    z-index: 99999999;
+    overflow: auto;
+}
+
+@media(max-width: 768px) {
+    .custom-alert-textbox {
+        width: 60%;
+    }
+}
+
+.custom-alert-text {
+    font-size: 1rem;
+    /* overflow: auto; */
+    overflow-wrap: break-word;
+    /* word-break: break-all; */
+    /* word-wrap: break-word; */
+}
+
+.custom-alert-button {
+    float: right;
+}
+
+.resume-order-state-payed {
+    background-color: #28a745;
+    padding: .4rem .7rem;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+    border-radius: .25rem;
+}
+
+.resume-order-state-pendent {
+    background-color: #ffc107;
+    padding: .4rem .7rem;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+    border-radius: .25rem;
+}
+
+.resume-order-state-cancelled {
+    background-color: #dc3545;
+    padding: .4rem .7rem;
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1;
+    border-radius: .25rem;
+}
+
+.resume-order-state-default {
+    background-color: lightcyan;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1;
+    border-radius: .25rem;
+}
+
+@media(max-width: 991px) {
+    .resume-order-state-payed,
+    .resume-order-state-pendent,
+    .resume-order-state-cancelled,
+    .resume-order-state-default {
+        font-size: 1rem;
+        padding: .1rem .5rem;
+    }
+}
+
+/* SEARCHER */
+.tail-number-text {
+    position: absolute;
+    width: 100%;
+    height: 18%;
+    margin-top: 8%;
+    margin-left: 5%;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+.tail-number-text-size {
+    align-items: center;
+    outline: none;
+    border: hidden;
+    display: flex;
+    font-size: min(7vw,50px);
+}
+
+.full-number-text {
+    position: absolute;
+    width: 45%;
+    height: 10%;
+    margin-top: 8%;
+    margin-left: 12%;
+    border-radius: 6px;
+    background-color: transparent;
+}
+
+.full-number-text-size {
+    align-items: center;
+    outline: none;
+    border: hidden;
+    font-size: min(7vw,50px);
+    display: flex;
+}
+
+.full-number-text {
+    width: 45%;
+    height: 10%;
+    margin-top: 8%;
+    margin-left: 12%;
+    background-color: transparent;
+}
+
+.full-number-text-size {
+    font-size: min(7vw,50px);
+}
+
+
+/* lg */
+@media(max-width: 1200px) {
+    .tail-number-text-size {
+        font-size: min(7vw,50px);
+    }
+    
+    .tail-number-text {
+        margin-left: 3%;
+    }
+
+    .full-number-text {
+        margin-top: 9%;
+    }
+}
+
+/* md */
+@media(max-width: 992px) {
+    .tail-number-text-size {
+        font-size: min(7vw,39px);
+    }
+
+    .tail-number-text {
+        margin-left: 2%;
+    }
+
+    .full-number-text {
+        margin-top: 10%;
+    }
+}
+
+/* sm */
+@media(max-width: 768px) {
+    .tail-number-text-size {
+        font-size: min(7vw,43px);
+    }
+
+    .tail-number-text {
+        margin-left: 3%;
+        margin-top: 7%;
+    }
+
+    .full-number-text {
+        margin-top: 8%;
+    }
+}
+
+/* <sm */
+@media(max-width: 576px) {
+    .tail-number-text-size {
+        font-size: min(10vw,57px);
+    }
+
+    .tail-number-text {
+        margin-left: 4%;
+        margin-top: 7%;
+    }
+
+    .full-number-text {
+        margin-top: 9%;
+    }
+    
+    .full-number-text-size {
+        font-size: min(10vw,57px);
+    }
+}
+
+.btn-verde-claro,
+.button_buscar_numero,
+.carrito_button_finalizar,
+.resume_order_button_continuar,
+.button_anyadir_a_la_cesta_row_multi {
+    background-color: #17A44B;
+    color: #FFFFFF;
+}
+
+.bg-alternative-border{
+    background-color: #FFFFFF;
+    border-color: #17A44B !important;
+}
+
+.text-alternative{
+    color: #17A44B !important;
+}
+
+.text_color_ws_modals{
+    color: #FFFFFF !important;
+}
+
+.selected_day{
+    color: white !important;
+    background-color: #17A44B;
+}
+
+.text_color_ws{
+    color: #FFFFFF;
+}
+
+.color_white{
+    color: white;
+}
+
+body {
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif ;
+    font-weight: 400;
+    /*color: #FFFFFF;*/
+    margin: 0;
+    line-height: 25px;
+    background: #fff;
+    -webkit-box-sizing: box-sizing;
+    -moz-box-sizing: box-sizing;
+    box-sizing: box-sizing;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+    /*color: #FFFFFF;*/
+    font-weight: 700;
+}
+
+p {
+    /*color: #FFFFFF;*/
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+a {
+    /*color: #17A44B;*/
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+.page-header{
+    background-image: url('');
+}
+
+#event{
+    background-image: url('');
+}
+
+#copyright{
+    background: #B5B5B5;
+}
+
+#cards{
+    background: #B5B5B5;
+}
+
+footer{
+    background: #B5B5B5;
+    color: #000000;
+}
+
+footer ul li a {
+    font-size: 13px;
+    font-weight: 400;
+    color: #000000;
+}
+
+#copyright .copyright-text{
+    color: #000000;
+}
+
+.btn_login_style{
+    background-color: #FFFFFF;
+    color: #17A44B !important;
+    border-radius: 25px;
+    margin-right: 15px;
+}
+
+.btn_goToCart{
+    color: #FFFFFF;
+    background-color: #17A44B !important;
+    border-radius: 25px;
+    margin-right: 15px;
+}
+
+.btn_continueBuying{
+    background-color: #FFFFFF;
+    color: #17A44B !important;
+    border: 1px solid #17A44B;
+    border-radius: 25px;
+    margin-right: 15px;
+}
+
+.text-azul{color: #17A44B}
+.bg-azul{ background-color: #17A44B; }
+.btn-azul{ background-color: #17A44B; color: #fff }
+.btn-header{ background-color: #17A44B}
+.text-header{color: #FFFFFF}
+header nav ul li a:hover{ color: #17A44B !important }
+
+header nav ul li.active a{background: #17A44B !important; color: #fff !important;border-radius: 50px; }
+
+header nav ul li .dropdown-menu{margin-top: 26px;  border-color: #17A44B;border-style: solid;  border-width: 2px 0 0 0; text-transform: initial;}
+
+.button_login {
+    background: #17A44B !important; color: #fff !important;border-radius: 50px; 
+    font-weight: lighter;
+    border-color: unset;
+    padding: .5rem 1.1rem !important;
+}
+
+.button_register {
+    background: #17A44B !important; color: #fff !important;border-radius: 50px;
+    font-weight: lighter;
+    border-color:unset;
+    padding: .5rem 1.1rem !important;
+}
+
+.button_jugar_menu_games_home_comprobar{
+    border-radius: 34px;
+    background-color: #17A44B;
+    display: inline-block !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.button_jugar_menu_games_home{
+    background-color: #B5B5B5;
+}
+
+.button_jugar_menu_games_home_text{
+    color: #FFFFFF;
+}
+
+.button_jugar_menu_games_home_text_secondary {
+    color: #FFFFFF;
+}
+
+.page-header .breadcrumb li {
+    line-height: 25px;
+    color: #17A44B;
+}
+
+#sidebar .menu-left li a.cesta:hover{background-color:#17A44B; color: #fff}
+
+.widget-buscador a.terminacion:hover{background-color: #17A44B;}
+
+.back-to-top i {
+    display: block;
+    width: 40px;
+    font-size: 20px;
+    height: 40px;
+    background: #17A44B;
+    color: #FFFFFF;
+    text-align: center;
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.08);
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.container_button_comprobar{
+    background-color:#17A44B;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    width:190px;
+}
+
+.button_boleto_sencillo{
+    width: 49%;
+    height: 50px;
+    background-color: #17A44B;
+    color:white;
+}
+
+.button_boleto_proximos_sorteos{
+    width:100%;
+    height: 50px;
+    background-color: #17A44B;
+    color:white;
+}
+
+.button_boleto_multiple{
+    width: 49%;
+    height: 50px;
+    background-color: #17A44B;
+    color:white;
+    opacity: 0.3;
+}
+
+.button_comprar_añadir_al_carrito {
+    background-color: #17A44B;
+    color: #FFFFFF;
+}
+
+.button_comprobar_euromillones_comprobar_apuesta{
+    border-radius: 34px;
+    background-color: #17A44B;
+    height: 59px;
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 300;
+    width: 228px;
+}
+
+.primary_color_background{
+    background-color: #17A44B;
+}
+
+.primary_color{
+    color: #17A44B;
+}
+
+.swipe-left-animation {
+    animation: swipe-left 0.5s 1;
+}
+
+.swipe-right-animation {
+    animation: swipe-right 0.5s 1;
+}
+
+@keyframes swipe-left {
+    0%   {left: 0px;}
+    100%  {left: -20px;}
+}
+
+@keyframes swipe-right {
+    0%   {right: 0px;}
+    100%  {right: -20px;}
+}

@@ -1,0 +1,23 @@
+name: Building docker
+run-name: Building docker by ${{ github.actor }}
+on:
+  workflow_dispatch:
+
+jobs:
+  build-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup `packer`
+        uses: hashicorp/setup-packer@main
+        id: setup
+        with:
+          version: 1.6.5
+      - name: Commands
+        run: |-
+          packer --version
+          ls -la
+          cd docker
+          ls -al 
+          packer build

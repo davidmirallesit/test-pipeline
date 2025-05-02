@@ -1,0 +1,5 @@
+{
+  "dst_folder": "../public/img/",
+  "src" : "custom/img/**/*"
+}
+

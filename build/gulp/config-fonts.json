@@ -1,0 +1,6 @@
+{
+  "dst_folder": "../public/fonts/",
+  "src_paths" : [
+    "custom/fonts/**/*"
+  ]
+}

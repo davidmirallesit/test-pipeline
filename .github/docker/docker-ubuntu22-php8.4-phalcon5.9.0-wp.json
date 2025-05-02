@@ -1,0 +1,114 @@
+{
+  "variables": {
+    "registry_url":      "{{env `REGISTRY_URL`}}",
+    "registry_username": "{{env `REGISTRY_USERNAME`}}",
+    "registry_password": "{{env `REGISTRY_PASSWORD`}}",
+    "docker_base_image": "{{env `DOCKER_BASE_IMAGE`}}",
+    "docker_name":       "{{env `DOCKER_NAME`}}",
+    "docker_version":    "{{env `DOCKER_VERSION`}}",
+    "php_version":       "{{env `PHP_VERSION`}}",
+    "phalcon_version":   "{{env `PHALCON_VERSION`}}",
+    "entrypoint":        "{{env `ENTRYPOINT`}}",
+    "env_conf":          "{{env `ENV_CONF`}}",
+    "nginx_conf":        "{{env `NGINX_DEFAULT_CONF`}}",
+    "webpremium_folder": "{{env `WEBPREMIUM_FOLDER`}}",
+    "redis_commands":    "{{env `REDIS_COMMANDS_FILE`}}"
+  },
+  "builders": [
+    {
+      "type":  "docker",
+      "image": "{{user `docker_base_image`}}",
+      "commit": true,
+      "changes": [
+        "USER root",
+        "WORKDIR /var/www",
+        "EXPOSE 80 443",
+        "ENTRYPOINT /entrypoint.sh"
+      ]
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+        "set -ex && DEBIAN_FRONTEND=noninteractive",
+        "apt update -y",
+        "apt upgrade -y",
+        "apt install -y software-properties-common",
+        "add-apt-repository ppa:ondrej/php",
+        "apt update -y",
+        "ln -fs /usr/share/zoneinfo/Europe/Madrid /etc/localtime",
+        "apt install -y libpcre3-dev php{{user `php_version`}} php{{user `php_version`}}-dev php{{user `php_version`}}-cli php{{user `php_version`}}-fpm php{{user `php_version`}}-common php{{user `php_version`}}-redis php{{user `php_version`}}-sockets php{{user `php_version`}}-mysql php{{user `php_version`}}-zip php{{user `php_version`}}-gd php{{user `php_version`}}-mbstring php{{user `php_version`}}-curl php{{user `php_version`}}-xml php{{user `php_version`}}-psr php{{user `php_version`}}-intl php{{user `php_version`}}-igbinary php{{user `php_version`}}-bcmath",
+        "apt install -y python3-pip nginx imagemagick-6.q16 qpdf wget git redis-server nano",
+        "pecl install zephir_parser",
+        "echo \"extension=zephir_parser.so\" | tee -a /etc/php/{{user `php_version`}}/mods-available/zephir_parser.ini",
+        "phpenmod zephir_parser && cd /tmp && wget https://github.com/zephir-lang/zephir/releases/download/0.17.0/zephir.phar && mv zephir.phar /usr/local/bin && cd /usr/local/bin/ && mv zephir.phar zephir && chmod a+x zephir",
+        "cd /tmp && git clone https://github.com/phalcon/cphalcon && cd cphalcon/ && git checkout tags/v{{user `phalcon_version`}} ./ && zephir fullclean && zephir compile",
+        "cd ext && phpize && ./configure && make && make install",
+        "echo \"extension=phalcon.so\" | tee -a /etc/php/{{user `php_version`}}/mods-available/phalcon.ini",
+        "phpenmod phalcon",          
+        "cd /tmp && curl -sS https://getcomposer.org/installer | php",
+        "mv composer.phar /usr/local/bin/composer",
+        "sed -i 's/user www-data;/user root;/g' /etc/nginx/nginx.conf",
+        "sed -i 's/# requirepass foobared/requirepass foobared/g' /etc/redis/redis.conf",
+        "sed -i 's/bind 127.0.0.1 -::1/bind 0.0.0.0/g' /etc/redis/redis.conf",
+        "systemctl enable redis-server",
+        "systemctl enable php{{user `php_version`}}-fpm",
+        "systemctl enable nginx",
+        "rm -rf /var/lib/apt/lists/*",
+        "apt autoremove -y; apt purge -y $(dpkg --list | grep '^rc' | awk '{print $2}')"
+      ]
+    },
+    {
+      "type": "file",
+      "source": "files/entrypoint.sh",
+      "destination": "/entrypoint.sh"
+    },
+    {
+      "type": "file",
+      "source": "files/nginx_default",
+      "destination": "/etc/nginx/sites-available/default"
+    },
+    {
+      "type": "file",
+      "source": "{{user `webpremium_folder` }}",
+      "destination": "/var/www/webpremium/"
+    },      
+    {
+      "type": "shell",
+      "inline": [
+        "chmod +x /entrypoint.sh",
+        "chmod 777 -R /var/www/webpremium/*",
+        "mkdir -p /run/php",
+        "chmod 777 /run/php",
+        "rm -Rf /var/www/webpremium/.env.ini"
+      ]
+    },
+    {
+      "type": "file",
+      "source": "files/.env.localhost",
+      "destination": "/var/www/webpremium/.env.ini"
+    },
+    {
+      "type": "file",
+      "source": "files/redis-commands.txt",
+      "destination": "/redis-commands.txt"
+    }
+  ],
+  "post-processors": [
+    [
+      {
+        "type": "docker-tag",
+        "repository": "{{user `registry_url`}}/{{user `docker_name`}}",
+        "tags": ["{{user `docker_version`}}"]
+      },
+      {
+        "type": "docker-push",
+        "ecr_login": true,
+        "login_server" : "{{user `registry_url`}}",
+        "login_username": "{{user `registry_username` }}",
+        "login_password": "{{user `registry_password` }}"
+      }
+    ]
+  ]
+}

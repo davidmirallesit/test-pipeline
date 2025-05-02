@@ -1,0 +1,11 @@
+{
+  "paths": [
+  	"../app/vendor",
+  	"../build/node_modules",
+    "../public/css",
+    "../public/files",
+    "../public/fonts",
+    "../public/img",
+    "../public/js"
+  ]
+}
