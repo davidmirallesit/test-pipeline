@@ -27,11 +27,5 @@ jobs:
         with:
           webhook_url: https://discord.com/api/webhooks/1026099782244118569/JVWVeWvs8usNtAUlbRGoRrXS2s6pajENmLBZbmRNG5k781yGBLmRWQoPeF6SDD_tIMZO
           title: Nueva imagen de docker para webpremium
-          message: "776535672105.dkr.ecr.eu-west-3.amazonaws.com/infolot-base:$GITHUB_SHA-webpremium"
+          message: "776535672105.dkr.ecr.eu-west-3.amazonaws.com/infolot-base:${GITHUB_SHA}-webpremium"
           include_image: false
-      - name: Discord notification
-        env:
-          DISCORD_WEBHOOK: https://discord.com/api/webhooks/1026099782244118569/JVWVeWvs8usNtAUlbRGoRrXS2s6pajENmLBZbmRNG5k781yGBLmRWQoPeF6SDD_tIMZO
-        uses: Ilshidur/action-discord@master
-        with:
-          args: 'Nueva imagen de docker para webpremium: 776535672105.dkr.ecr.eu-west-3.amazonaws.com/infolot-base:$GITHUB_SHA-webpremium :checkered_flag:'
